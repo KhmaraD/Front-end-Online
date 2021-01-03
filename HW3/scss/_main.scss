@@ -1,0 +1,287 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin button {
+    background-color: $buttonColor;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 13px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 110%;
+    font-family: $fontFamily;
+}
+
+@mixin links {
+    color: white;
+    font-family: $fontFamily;
+}
+
+.highlight{
+    position: relative;
+    z-index: 1;
+
+    &:before{
+        position: absolute;
+        display: block;
+        background-color: $markerColor;
+        height: 50px;
+        z-index: -1;
+        content: '';
+    }
+}
+
+body {
+    background: $contentBackground;
+}
+header {
+    height: 720px;
+    width: 1536px;
+    background: url($backgrImg) center center no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 610px 285px;
+    
+    .landing-logo {
+        padding: 20px 0px 0px 154px;
+        
+        p {
+            font-family: $altFontFamily;
+            display: inline-block;
+            font-weight: bolder;
+            font-size: x-large;
+            padding: 0px 10px;
+            line-height: 90%;
+            color: $hFontsColor;
+            
+            span {
+                display: block;
+                font-size: x-small;
+                text-align: center;
+            }
+        }
+    }
+    
+    .header_heading {
+        font-family: $fontFamily;
+        font-size: 450%;
+        font-weight: bold;
+        max-width: 45%;
+        max-height: 70%;
+        line-height: 98%;
+        padding: 65px 0px 0px 155px;
+        color: $hFontsColor;
+        @extend .highlight;
+        
+        &::before {
+            width: 303px;
+            top: 93px;
+            margin-top: 64px;
+        }
+    }
+    
+    .header_text {
+        font-family: $altFontFamily;
+        line-height: 24px;
+        font-size: 16px;
+        white-space: pre-line;
+        padding: 37px 0px 0px 153px;
+        word-spacing: 1.3px;
+        margin-bottom: 62px;
+        color: $hFontsColor;
+    }
+    
+    div .header_button {
+        @include button;
+        margin-left: 155px;
+    }
+    
+    a {
+        margin-left: 148px;
+        @include links;
+        font-size: 124%;
+    }
+}
+main {
+    margin: 0 auto;
+    width: 960px;
+      
+    .section_text {
+        font-family: $fontFamily;
+        font-size: 262%;
+        font-weight: 600;
+        padding: 35px 0 9px 280px;
+        color: $welcomeColor;
+        @extend .highlight;
+            &::before {
+                width: 189px;
+                top: 31px;
+                right: 275px;
+            }
+    }
+    
+    .section_card_wrap {
+        margin: 15px 0 0 12px;
+        .section_card {
+            background: $sectionColor;
+            margin: 27px auto;
+            width: 880px;
+            height: 250px;
+            padding: 13px;
+            border-radius: 5px;
+            display: flex;
+            
+            &:first-child {
+                .section_card_img {
+                    width: 300px;
+                    height: 235px;
+                    margin: 9px;
+                    flex: none;
+                    border-radius: 5px;
+                }
+            }
+            
+            &:nth-child(2){
+                .section_card_img {
+                    width: 290px;
+                    height: 235px;
+                    margin: 9px;
+                    flex: none;
+                    border-radius: 5px;
+                }
+            }
+            
+            &:last-child {
+                .section_card_img {
+                    width: 315px;
+                    height: 235px;
+                    margin: 9px;
+                    flex: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+        
+        .section_card_right_container {
+            .section_card_heading {
+                color: #fff;
+                font-size: 150%;
+                text-align: center;
+                font-family: $fontFamily;
+                font-weight: 600;
+                padding-top: 38px;
+                padding-right: 15px;
+            }
+            
+            .section_card_text {
+                color: #C0C3CE;
+                text-align: justify;
+                font-size: 100%;
+                line-height: 150%;
+                font-family: $altFontFamily;
+                margin: 20px 91px 10px 70px;
+            }
+            
+            .section_link {
+                color: #C0C3CE;
+                font-family: $fontFamily;
+                font-size: 100%;
+                margin-left: 230px;
+                font-weight: 500;
+            }
+        }
+    }
+    .section_banner {
+        width: 960px;
+        height: 142px;
+        margin-left: 8px;
+        margin-top: 110px;
+        border-radius: 6px;
+        background: linear-gradient(to right, map-get($gradientColors, gradient1), map-get($gradientColors, gradient2));
+        position: absolute;
+        
+        .section_banner_heading {
+            font-size: 190%;
+            font-family: $fontFamily;
+            font-weight: bold;
+            margin-left: 100px;
+            padding-top: 25px;
+            color: $hFontsColor;
+            @extend .highlight;
+            
+                &::before {
+                    width: 65px;
+                    top: 12px;
+                    left: 122px;
+            }
+        }
+        
+        .section_banner_text {
+            font-family: $altFontFamily;
+            color: #BAC0BD;
+            margin-left: 103px;
+            margin-top: 15px;
+        }
+        
+        .section_banner_button {
+            @include button;
+            position: relative;
+            left: 715px;
+            bottom: 55px;
+        }
+    }
+}
+
+footer {
+    background-color: $sectionColor;
+    background-size: cover;
+    z-index: -1;
+    height: 242px;
+    position: relative;
+    top: 180px;
+    
+    .footer-wrap {
+        padding-top: 135px;
+        padding-left: 155px;
+        display: flex;
+        
+        .footer_logo {
+            width: 180px;
+            p {
+                font-family: $altFontFamily;
+                color: #C0C3CE;
+                display: inline-block;
+                font-weight: bolder;
+                font-size: x-large;
+                padding: 0 10px;
+                line-height: 90%;
+                span {
+                    display: block;
+                    font-size: x-small;
+                    text-align: center; 
+                }
+            }
+        }
+        
+        .footer_text {
+            color: #C0C3CE;
+            font-size: 90%;
+            text-align: left;
+            font-family: $altFontFamily;
+            width: 22%;
+            display: inline-block;
+            padding-left: 18%;
+            line-height: 140%;
+        }
+        
+        .footer-cr {
+            @extend .footer_text;
+            font-size: 100%;
+            padding-left: 22%;
+            padding-top: 18px; 
+        }
+    }
+}

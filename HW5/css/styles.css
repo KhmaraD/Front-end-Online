@@ -1,0 +1,370 @@
+body {
+    display: flex;
+    max-width: 940px;
+    flex-direction: column;
+    flex-basis: 65%;
+    font-family: roboto;
+    background-color: #0b192f;
+    color: #484848;
+    padding: 0;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 160%;
+}
+
+p {
+    font-size: 60%;
+    line-height: 2.2;
+}
+
+.post-1 {
+	background: #F3D250;
+}
+.post-2 {
+	background: #8D8741;
+}
+.post-3 {
+	background: #659DBD;
+}
+.post-4 {
+	background: #DAAD86;
+}
+
+.main-content {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.header-sidebar {
+    display: flex;
+    flex-basis: 100%;
+    background-color: #162b4d;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading-logo {
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 160%;
+    padding: 20px;
+}
+
+.text-red {
+    color: red;
+}
+
+.header-sidebar .nav-links {
+    display: inline;
+    padding-right: 40px;
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.header-sidebar .nav-link:hover {
+    background-color: #43546F;
+    cursor: pointer;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul > li {
+    display: inline-block;
+}
+
+.header-sidebar .nav-link {
+    padding: 25px 18px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-item {
+    max-width: 940px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-item:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.article-img {
+    width: 50%;
+    background-size: cover;
+}
+
+.article-img:hover, .article-info:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.article-info {
+    padding: 1% 11% 1% 5%;
+}
+
+.blog-item:nth-child(even) .article-info {
+    padding: 1% 5% 1% 11%;
+}
+
+.news-img {
+    width:  100%;
+}
+
+.content-item .bottom-post {
+    background: url('../img/post5.jpg');
+    background-size: cover;
+}
+
+.content-item .bottom-post-info {
+    padding: 20% 4% 10% 4%;
+    color: #fff;
+    font-weight: 200;
+}
+
+
+.content-item .post-date {
+    position: absolute;
+    color: #484848;
+    font-weight: 200;
+    text-align: center;
+    padding: 2% 1%;
+    font-size: 100%;
+}
+
+.blog-item:nth-child(even) .post-date {
+    right: 90%;
+}
+
+.blog-item:nth-child(odd) .post-date {
+    left: 90%;
+}
+
+.post-date .date {
+    font-size: 200%;
+}
+
+.aside-news {
+    display: flex;
+    max-width: 23%;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.aside-news .news-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #fff;
+    margin-bottom: 8%;
+}
+
+.aside-news .news-item .news-info {
+    padding: 6% 11% 8% 11%;
+}
+
+.news-info h2 {
+    font-size: 130%;
+    line-height: 1;
+}
+
+.news-info p {
+    line-height: 2;
+    padding-top: 10px;
+}
+
+
+.news-item .news-button {
+    text-transform: uppercase;
+    font-size: 55%;
+    padding: 5px;
+    border: 1px solid #b8b8b8;
+    background-color: white;
+}
+
+.news-item .news-button:hover {
+    border: 1px solid white;
+    border-bottom: 1px solid #b8b8b8;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    background-color: #162b4d;
+    margin-top: 2%;
+    color: #8D8D8D;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 5px 0;
+}
+
+.footer-text-left {
+    padding-left: 2%;
+}
+
+.footer-text-right {
+    padding-right: 2%;
+}
+
+
+@media (max-width: 768px) {
+    
+    .wrap-container {
+        max-width: 100%;
+    }
+    
+    .nav-links ul {
+        display: none;
+    }
+    
+    .header {
+        height: 20%;
+    }
+    
+    .heading-logo {
+        padding-left: 40%;
+        font-size: 200%;
+        margin-top: 20%;
+    }
+    
+    .header .header-sidebar .heading-logo:before {
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 600;
+        padding-right: 5px;
+        position: absolute;
+        top: 10%;
+        right: 47%;
+    }
+    
+    .header-sidebar {
+        display: flex;
+    }
+    
+    .blog-item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .article-img {
+        width: 100%;
+        height: 50%;
+        background-size: cover;
+    }
+    
+    .content-item {
+        max-width: 62%;
+    }
+    
+    .aside-news {
+        max-width: 32%;
+    }
+    
+    .blog-content .blog-item .article-info, .bottom-post-info {
+        padding: 5% 9% 15% 8%;
+        text-align: left;
+        font-size: 155%;
+    }
+    
+    .article-info p {
+        line-height: 1.5;
+    }
+    
+    .blog-item .post-date {
+        position: absolute;
+        color: #484848;
+        font-weight: 200;
+        text-align: center;
+        padding: 2% 1%;
+        font-size: 120%;
+    }
+    
+    .blog-item:nth-child(even) .post-date, .blog-item:nth-child(odd) .post-date {
+        bottom: 2%;
+        left: 0;
+        right: 0;
+    }
+    
+    .news-info {
+        font-size: 130%;
+    }
+    
+    .footer {
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        font-size: 150%;
+    }
+    
+    .bottom-post {
+        margin-bottom: 4%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrap-container {
+        max-width: 100%;
+    }
+    
+    .wrap-container .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .content-item {
+        max-width: 96%;
+    }
+    
+    .aside-news {
+        max-width: 96%;
+        margin: 0;
+    }
+    
+    .bottom-post {
+        margin-bottom: 4%;
+    }
+    
+    .heading-logo {
+        padding-left: 35%;
+    }
+    
+    .header .header-sidebar .heading-logo:before {
+        top: 5%;
+    }
+}
