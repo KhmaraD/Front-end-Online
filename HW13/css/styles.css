@@ -1,0 +1,56 @@
+.navbar {
+    background-color: #fff;
+    margin: 0 15%;
+}
+
+#navbarNav {
+    padding-left: 20%;
+}
+
+.container {
+    margin: 0 15%;
+}
+
+h1 {
+    margin: 20% 20% 0 5%;
+}
+
+.h5 {
+    margin: 5% 20% 2% 5%; 
+}
+
+.btn-danger {
+    margin-left: 5%;
+}
+
+.img-fluid {
+    padding-right: 5%;
+}
+
+.section-cols {
+    color: #fff;
+}
+
+.game-block-1 {
+    background-color: #343A40;
+}
+
+.section-header, .h6 {
+    text-align: center;
+}
+
+.h6 {
+    margin: 0 25%;
+}
+
+.section-cols {
+    padding-top: 3%;
+}
+
+.card-img-top {
+    width: 300px;
+}
+
+.row-cols-3 {
+    justify-items: center;
+}
